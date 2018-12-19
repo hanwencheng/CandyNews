@@ -1,0 +1,36 @@
+<!--miniprogram/pages/createNews/createNews.wxml-->
+<view>
+  <!-- 上传图片 -->
+  <view id="container">
+    <view class="textSection">
+      <textarea bindblur="onTitleBlur" auto-height placeholder="输入标题" />
+    </view>
+
+    <view class="textSection">
+      <textarea bindblur="onTextAreaBlur" auto-height placeholder="输入正文内容" />
+    </view>
+
+    <Single-Display text="上传图片" bindtap='doUpload' icon-name='upload'  wx:if="{{!imgUrl}}"/>
+    <view class="button-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit"/>
+      <button 
+        id="createNews-icon"
+        style="background-image: url('../../icons/trash.svg')"
+      ></button>
+    </view>
+
+    <Input-Component text="输入糖果总量" placeholder="100" type="number" bindblur="onValueBlur"/>
+
+    <Input-Component text="转发糖果收益百分比" placeholder="0.1" type="digit" bindblur="onBenifitBlur"/>
+
+    <view class="button-container">
+      <button 
+        id="createNews-icon"
+        style="background-image: url('../../icons/plus-circle.svg')"
+      ></button>
+      <text class="button-text" id='createNews-text' bindtap='onSubmitTap'>创建新快讯</text>
+    </view>
+
+
+  </view>
+</view>

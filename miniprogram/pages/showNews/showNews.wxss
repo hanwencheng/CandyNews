@@ -1,0 +1,35 @@
+/* miniprogram/pages/showNews/showNews.wxss */
+.title{
+  width:100%;
+  text-align: center;
+  font-size: 55rpx;
+  font-weight: bold;
+  padding: 30rpx;
+}
+
+.content{
+  width:100%;
+  text-align: left;
+  font-size: 25rpx;
+  padding: 20rpx;
+}
+
+.imageContainer{
+  max-height: 800rpx;
+  width: 100%;
+  padding: 20rpx;
+}
+
+
+.image{
+  max-height: 800rpx;
+  width: 100%;
+}
+
+.address-intro{
+  width:100%;
+  text-align: left;
+  font-size: 20rpx;
+  padding: 20rpx;
+  color: grey;
+}

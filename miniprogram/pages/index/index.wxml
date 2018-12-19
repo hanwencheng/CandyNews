@@ -1,0 +1,94 @@
+<!--index.wxml-->
+<view>
+
+  <!-- 用户 openid -->
+  <!-- <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatar-url}})"
+    ></button>
+  </view> -->
+
+<view wx:if='{{isFetching}}' class='fetchingContainer'>
+  <view class='imageContainer'>
+    <image class='image' src="../../logo.png" bindtap='onPreviewImage' mode="aspectFit" lazy-load="false"/>
+  </view>
+  <text class='fetchingText'> 正在从数据库加载用户信息... </text>
+</view>
+
+<view wx:if='{{!isFetching}}' class="container">
+
+  <camera
+  device-position="back"
+  flash="off"
+  binderror="onScanError"
+  mode="scanCode"
+  style="width: 100%; height: 300px;"
+  bindscancode="onBarcodeScanned"
+  wx:if="{{scanOpen}}"
+  ></camera>
+
+  <view class='inputContainer' wx:if='{{!address}}'>
+    <text class='inputText'wx:if="{{!scanOpen}}" >第一次进入需要绑定井通地址</text>
+
+    <button class='inputButton' bindtap='onScanButton' wx:if="{{!scanOpen}}">通过二维码扫描地址</button>
+
+    <view class='addressInputContainer'>
+      <input class="addressInput" value="{{inputAddress}}" placeholder="请输入井通地址" type="text" bindinput="onInputAddress"/>
+    </view>
+
+    <button class='inputButton' bindtap="onConfirmButton">确认地址</button>
+
+  </view>
+
+    <Single-Display text="创建新快讯" bindtap='onCreateNewsTap' icon-name='plus-circle' wx:if='{{address}}'/>
+
+    <view id='newsList' wx:for="{{newsList}}" wx:key='address' wx:if='{{address}}'>
+      <navigator class='listItem' url="../showNews/showNews?address={{item.address}}" open-type="navigate" >
+        <view class='listItem-info'>
+          <view class='listItem-info-title'>
+             <text class='max-line'>{{item.title}}</text>
+          </view>
+          <view class='listItem-info-text'>
+            <text class='max-line'>{{item.text}}</text>
+          </view>
+        </view>
+        <view class='listItem-action'>
+          <view class='listItem-action-amount'>
+            <view class='listItem-action-amount-category'>
+              <view class='listItem-action-amount-intro'>
+                阅读激励
+              </view>
+              <view class='listItem-action-amount-value'>
+                {{item.value}}
+              </view>
+            </view>
+             <view class='listItem-action-amount-category'>
+              <view class='listItem-action-amount-intro'>
+                转发激励
+              </view>
+              <view class='listItem-action-amount-value'>
+                {{(item.benefit / 1) * 100}}%
+              </view>
+            </view>
+          </view>
+          <view class='listItem-action-remove'>
+            <view
+            style="background-image: url('../../icons/trash.svg')" 
+            class='listItem-action-remove-button' data-id="{{item._id}}" catchtap="onRemoveListItem"/>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+    <!-- 新建云函数 -->
+    <!-- <view class="uploader">
+      <navigator url="../showNews/showNews?address=jNSsKDp38m7FFXghSW1zuPCRsWVQLB99zm" open-type="navigate" class="uploader-text">
+        <text>测试数据页面</text>
+      </navigator>
+    </view> -->
+
+  </view>
+</view>

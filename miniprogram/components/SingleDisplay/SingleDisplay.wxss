@@ -1,0 +1,37 @@
+/* components/singleDisplay/SingleDisplay.wxss */
+:host{
+  margin-top: 40rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.icon {
+  width: 80rpx;
+  height: 60rpx;
+  margin: 20rpx 30rpx;
+  border: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-color: white;
+}
+
+.icon:hover {
+  background-color: white;
+}
+
+.text {
+  width: 100%;
+  line-height: 40px;
+  font-size: 30rpx;
+  color: #007aff;
+}

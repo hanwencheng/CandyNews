@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "快讯",
+  "usingComponents": {
+    "Single-Display": "../../components/SingleDisplay/SingleDisplay"
+  }
+}

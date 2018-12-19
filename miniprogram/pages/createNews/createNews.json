@@ -1,0 +1,7 @@
+{
+ "navigationBarTitleText": "创建新快讯",
+  "usingComponents": {
+    "Single-Display": "../../components/SingleDisplay/SingleDisplay",
+    "Input-Component": "../../components/InputComponent/InputComponent"
+  }
+}

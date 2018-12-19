@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+      "Single-Display": "../../components/SingleDisplay/SingleDisplay",
+      "Input-Component": "../../components/InputComponent/InputComponent"
+    }
+}

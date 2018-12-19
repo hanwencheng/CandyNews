@@ -1,0 +1,30 @@
+/* components/InputComponent/InputComponent.wxss */
+
+:host{
+  padding: 0 0 0 40rpx;
+  box-sizing: border-box;
+  margin-top: 40rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease;
+  justify-content: center;
+  height: 200rpx;
+}
+
+.text{
+  width: 100%;
+  line-height: 52px;
+  font-size: 34rpx;
+  color: #007aff;
+}
+
+.input{
+  border: black solid 1rpx;
+  background-color:#eee;
+}

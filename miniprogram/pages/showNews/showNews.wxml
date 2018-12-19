@@ -1,0 +1,24 @@
+<!--miniprogram/pages/showNews/showNews.wxml-->
+
+
+<view class='title'>
+  <text>{{title}}</text>
+</view>
+
+<view class='content'>
+  <text>{{text}}</text>
+</view>
+
+<view class='imageContainer' wx:if="{{imgUrl && imgUrl !== ''}}">
+  <image class='image' src="{{imgUrl}}" bindtap='onPreviewImage' mode="aspectFit" lazy-load="false"/>
+</view>
+
+<Single-Display text="阅读激励：{{value}}" icon-name='cash'/>
+<Single-Display text="转发激励：{{(benefit/1)*100}}%" icon-name='share'/>
+<Single-Display text="余额：{{current}}" icon-name='remain'/>
+
+
+<Single-Display text="{{address}}" icon-name='wallet' bindtap="onTapAddress"/>
+<view class='address-intro'>
+  <text>公钥地址：点击复制</text>
+</view>

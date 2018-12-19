@@ -1,0 +1,8 @@
+<!--components/singleDisplay/SingleDisplay.wxml-->
+
+    <view 
+      class="icon"
+      style="background-image: url('../../icons/{{iconName}}.svg')"
+    ></view>
+    <text class='text' bindtap='internalTap'>{{text}}</text>
+

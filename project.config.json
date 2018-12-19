@@ -1,0 +1,63 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false
+	},
+	"appid": "wxcba29eacf0d9c293",
+	"projectname": "CandyNews",
+	"libVersion": "2.4.2",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "群聊打开小程序",
+					"pathName": "pages/showNews/showNews",
+					"query": "address=jNSsKDp38m7FFXghSW1zuPCRsWVQLB99zm&openid=oXir70IciuyqbH9hv4oizYPHgMTE",
+					"scene": "1008"
+				},
+				{
+					"id": 2,
+					"name": "群聊打开小程序shareticket",
+					"pathName": "pages/showNews/showNews",
+					"query": "address=jjhoxjXsFoqA3r3tMZWoX4LLCcxe6Cw7C8&openid=11s",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "3c2VU4bSPlVtH_B7Lhl-vCyh9Fmum-irFuXU89EUOfU@cr4dev",
+						"shareKey": "ei29vsrbFR8UKDR-oSnmjVIRwc-iWTO97ojg8gNRRZ72O2VAbh3M-H5158qAI5aifscWbh86RexDafvqODbvZw~~"
+					}
+				}
+			]
+		}
+	}
+}
